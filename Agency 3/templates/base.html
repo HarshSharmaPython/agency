@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ttn</title>
+</head>
+
+<body>
+
+
+            <a href="/">home</a>
+            <a href="/price">price</a>
+                {% if current_user.is_authenticated %}
+                
+                <a href="/admin_dashboard">admin Dashboard</a>
+                
+                    <a href="/user_dashboard">user Dashboard</a>
+                    <a href="/logout">Logout</a>
+                {% else %}
+                    <a href="/login">Login</a>
+                    <a href="/register" >Register</a>
+                {% endif %}
+      
+        {% block content %}
+        {% endblock %}
+
+</body>
+</html>

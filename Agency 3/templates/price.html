@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2> price page </h2>
+
+    plane 1
+    <form method="POST" action="/price/plane_1">
+        {{ form.csrf_token }}
+        {{ form.plane() }}
+    </form>
+<hr>
+plane 2
+    <form method="POST" action="/price/plane_2">
+        {{ form.csrf_token }}
+        {{ form.plane() }}
+    </form>
+<hr>
+plane 3
+    <form method="POST" action="/price/plane_3">
+        {{ form.csrf_token }}
+        {{ form.plane() }}
+    </form>
+
+
+{% endblock %}
